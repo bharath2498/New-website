@@ -87,19 +87,46 @@
 
 # dict_com = { employee["name"]:employee["salary"] for employee in employees }
 # print(dict_com)
-class Employee:
+
+class Employee():
+    company = "infosys"
+
     def __init__(self, name,salary,location):
         self.name = name
         self.salary = salary
         self.location = location
 
-    def show_name(self):
-        print(self.name,self.location)
-    def change_name(self,change_name):
-        self.name = change_name
-        return  self.name
+    def show_details(self):
+        print(self.name,self.location,self.salary)
+    def change_name(self,new_name):
+        self.name = new_name
+    def salary_increment(self,salary_increment):
+        self.salary = self.salary + salary_increment
+    def location_change(self,new_loc):
+        self.location = new_loc
+class devolper(Employee):
+    def __init__(self, name, salary, location,language):
+        super().__init__(name, salary, location)
+        self.language = language 
+    def show_details(self):
+        super().show_details()
+        print(self.language)
 
-emp1 = Employee('Bharath',50000,'hyd')
+    
+dev1 = devolper(
+    "Bharath",
+    50000,
+    "hyd",
+    "Python"
+)
+dev1.show_details()
 
-emp1.change_name("vijay")
-emp1.show_name()
+
+# emp1 = Employee('Bharath',50000,'hyd')
+# emp2 = Employee('Bharath',50000,'hyd')
+# print(dev1.company)
+# emp1.change_name("vijay")
+# emp1.salary_increment(25000)
+# emp1.location_change("banglore")
+# emp1.show_name()
+# emp2.show_name()
