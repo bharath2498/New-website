@@ -88,5 +88,18 @@
 # dict_com = { employee["name"]:employee["salary"] for employee in employees }
 # print(dict_com)
 class Employee:
-    pass
-emp1 = Employee()
+    def __init__(self, name,salary,location):
+        self.name = name
+        self.salary = salary
+        self.location = location
+
+    def show_name(self):
+        print(self.name,self.location)
+    def change_name(self,change_name):
+        self.name = change_name
+        return  self.name
+
+emp1 = Employee('Bharath',50000,'hyd')
+
+emp1.change_name("vijay")
+emp1.show_name()
