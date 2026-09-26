@@ -264,6 +264,281 @@ class devolper(Employee):# inheritance
 #         print("Welcome")
 # validate_age(17)
 
-from calculator import add
+# from utils.calculator import add
 
-add(10,20,30,40,50)
+# ac=add(10,20,30,40,50)
+# print(ac)
+# def log_function(func):
+
+#     def wrapper():
+#         print("starting func")
+
+#         func()
+
+#         print("finished func")
+
+#     return wrapper
+# @log_function
+# def add():
+#     print(10 + 20)
+
+# def log_function(func):
+#     print("Decorator received:", func)
+#     def wrapper():
+#         func()
+#     return wrapper
+# @log_function
+# def add():
+#     print(10 + 20)
+# add()
+
+# def logger(func): #decorator 
+#     print("logger executed")
+#     def wrapper(*args,**kwargs):
+#         print("wrapper execute")
+#         func(*args,**kwargs)
+#         print("done")
+#     return wrapper
+# @logger
+# def add(a,b):
+#     print(a+b)
+# add(10,20)
+# def even_numbers(list1):
+#     for num in list1:
+#         if num%2 ==0 :
+#             yield num
+        
+# x=even_numbers([2,3,4,5,6])
+# print(next(x))
+# print(next(x))
+# print(next(x))
+# print(next(x))
+
+# path = r"C:\Users\maddu\OneDrive\Desktop\Bharathpython\localapp\sample.txt"
+
+# with open(path, "w") as file:
+#     file.write("Python Backend Developer")
+# with open("sample.txt", "r") as file:
+#     data = file.read()
+    
+# print(data)
+
+# from utils.calculator import add
+
+# def calculate_salary(basic:int,bonus:str):
+#     x=add(basic,bonus)
+#     print(x)
+# calculate_salary(50000,25000)
+
+
+# def get_names(users: list[dict]) -> list[str]:
+#     return users 
+
+# print(get_names([{'name':'a','value':'b'},{'name':'c','value':'d'}]))
+
+# from dataclasses import dataclass
+
+# @dataclass
+# class Employee:
+#     name: str
+#     email: str
+#     role: str = "user"
+#     active: bool = True
+
+
+
+# emp1 = Employee(
+#     "Bharath",
+#     "bharath@jdv.",
+    
+# )
+
+# print(emp1)
+
+# from enum import Enum
+
+# class OrderStatus(Enum):
+#     PENDING = "pending"
+#     SHIPPED = "shipped"
+#     DELIVERED = "delivered"
+#     CANCELLED = "cancelled"
+    
+# # print(OrderStatus.SHIPPED)
+# order = OrderStatus.SHIPPED.value
+# print(order)
+
+# from typing import TypedDict
+
+# class UserData(TypedDict):
+#     name: str
+#     age: int
+#     active: bool
+
+# def show_user(user: UserData):
+#     print(user["name"])
+#     print(user["age"])
+# user1: UserData = {
+#     "name": "Bharath",
+#     "age": 28,
+#     "active": True
+# }
+
+# show_user(user1)
+
+# from dataclasses import dataclass
+
+# @dataclass
+# class User:
+#     id: int
+#     name: str
+#     active: bool
+
+
+# def get_user(user_id: int) -> User | None:
+#     if user_id == 1:
+#         return User(1, "Bharath", True)
+
+#     return None
+# def show_user(user_id: int) -> None:
+#     user = get_user(user_id)
+
+#     if user is None:
+#         print("User not found")
+#         return
+
+#     print(user.name)
+# get_user(2)
+
+# import logging
+
+# logging.basicConfig(level=logging.INFO)
+# from dataclasses import dataclass
+
+
+# @dataclass
+# class User:
+#     id: int
+#     name: str
+#     active: bool
+
+# def get_employee(employee_id: int) -> str|None:
+#     if employee_id == 1:
+#         logging.info("User found")
+        
+#         employee_data=User(1, "Bharath", True)
+
+#         return employee_data.name
+#     else:
+#         logging.warning("Employee not found")
+# x = get_employee(1)
+# print(x)
+
+
+# import os
+
+# APP_NAME = os.getenv("APP_NAME", "BackendApp")
+# PORT = os.getenv("PORT", "5000")
+
+# print(APP_NAME)
+# print(PORT)
+
+# import json
+
+# employee = {
+#     "name": "Bharath",
+#     "salary": 50000,
+#     "active": True
+# }
+
+# json_data = json.dumps(employee)
+
+# print(json_data)
+# print(type(json_data))
+
+
+# import json
+
+# json_C_data = {"name": "Bharath", "age": 30,"city":"rjy"}
+
+
+# with open("users.json", "w") as file:
+#     json.dump(json_C_data, file)
+
+# with open("users.json", "r") as file:
+#    x = json.load(file)    
+# print(x["city"])
+# from datetime import datetime
+
+# formatted= datetime.now()
+
+# n_formatted = formatted.strftime("%d/%m/%Y %H:%M")
+
+# print(n_formatted)
+
+# date_object = datetime.strftime(
+  
+#     "%d-%m-%Y"
+# )
+
+# print(date_object)
+# print(type(date_object))
+
+# from datetime import datetime, timedelta
+
+# now = datetime.now()
+
+# deadline = now + timedelta(days=5)
+
+# print(now)
+# print(deadline)
+
+# from datetime import datetime, timedelta
+
+# now = datetime.now()
+# expiry_time = now + timedelta(minutes=30)
+
+# if now < expiry_time:
+#     print("Token is still valid")
+# else:
+#     print("Token expired")
+
+# from datetime import datetime, timedelta
+
+# now = datetime.now()
+# expiry_time = now - timedelta(minutes=30)
+
+# if now > expiry_time:
+#     print("Token expired")
+
+#Small task: create created_at using the current UTC time and print it
+
+
+# user1 = {
+#     "name": "Bharath",
+#     "skills": ["Python", "Django"]
+# }
+
+# user2 = user1.copy()
+
+# user2["skills"].append("Flask")
+# user2["skills"].append("java")
+
+# user2['name'] = "ravi"
+# print(user1)
+# print(user2)
+
+# from copy import deepcopy
+
+# employee1 = {
+#     "name": "Bharath",
+#     "skills": ["Python", "SQL"]
+# }
+
+# employee2 = deepcopy(employee1)
+# employee2["skills"].append("Django")
+# print(employee1)
+# print(employee2)
+skills = ["Python", "Django", "SQL"]
+
+for index, user in enumerate(skills, start=1):
+    print(index,user)
