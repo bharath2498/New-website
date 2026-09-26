@@ -538,7 +538,19 @@ class devolper(Employee):# inheritance
 # employee2["skills"].append("Django")
 # print(employee1)
 # print(employee2)
-skills = ["Python", "Django", "SQL"]
+# skills = ["Python", "Django", "SQL"]
 
-for index, user in enumerate(skills, start=1):
-    print(index,user)
+# for index, user in enumerate(skills, start=1):
+#     print(index,user)
+# employees = ["Bharath", "Ravi", "Kiran"]
+# locations = ["Hyderabad", "Bangalore", "Chennai"]
+
+# for employee,location in zip(employees,locations):
+#     print(employee,location)
+
+permissions = [True, True, False]
+
+result = any(permissions)
+result1 = all(permissions)
+
+print(result,result1)
