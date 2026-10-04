@@ -554,3 +554,22 @@ result = any(permissions)
 result1 = all(permissions)
 
 print(result,result1)
+
+# Developer example and employee practice from bharathbranch.
+dev1 = devolper(
+    "Bharath",
+    50000,
+    "hyd",
+    "Python"
+)
+dev1.show_details()
+
+
+# emp1 = Employee('Bharath',50000,'hyd')
+# emp2 = Employee('Bharath',50000,'hyd')
+# print(dev1.company)
+# emp1.change_name("vijay")
+# emp1.salary_increment(25000)
+# emp1.location_change("banglore")
+# emp1.show_name()
+# emp2.show_name()
